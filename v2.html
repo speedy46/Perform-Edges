@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performedges | Performance-Driven Mobile Advertising & Monetization (V2)</title>
+    
+    <!-- Meta & SEO Optimization -->
+    <meta name="description" content="Performedges specializes in CPI, CPS, CPL, CPM, CPO, PPC, and strategic media buying. Redefining mobile advertising for advertisers and publishers with measurable performance.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="http://localhost:3000/v2">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Performedges | Performance-Driven Mobile Advertising">
+    <meta property="og:description" content="Outcome-based mobile advertising for advertisers and publishers. Measurable ROI, global reach, and on-time payments.">
+    <meta property="og:url" content="http://localhost:3000/v2">
+    <meta property="og:site_name" content="Performedges">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <style>
+        /* InMobi Architectural Enhancements styled in Performedges Brand Identity */
+        :root {
+            --brand-mint: #3EB489;
+            --brand-mint-dark: #2da177;
+            --brand-slate: #495981;
+            --brand-slate-dark: #374363;
+            --brand-bg-light: #f8fafc;
+            --brand-text: #0f172a;
+            --brand-muted: #64748b;
+            --gradient-performedges: linear-gradient(135deg, #3EB489 0%, #495981 100%);
+            --gradient-soft: linear-gradient(135deg, rgba(62,180,137,0.08) 0%, rgba(73,89,129,0.08) 100%);
+        }
+
+        /* InMobi Persona Selector in Hero */
+        .persona-toggle-container {
+            display: inline-flex;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 2.5rem;
+            padding: 0.35rem;
+            margin-bottom: 2rem;
+        }
+
+        .persona-btn {
+            padding: 0.65rem 1.6rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: none;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.85);
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .persona-btn.active {
+            background: white;
+            color: var(--brand-slate);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* InMobi Dual Engine Cards */
+        .inmobi-engine-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 3rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inmobi-engine-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 45px -15px rgba(73, 89, 129, 0.12);
+            border-color: rgba(62, 180, 137, 0.5);
+        }
+
+        .inmobi-engine-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-performedges);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .inmobi-engine-card:hover::before {
+            opacity: 1;
+        }
+
+        /* InMobi 4-Pillar Grid */
+        .pillar-card {
+            background: white;
+            border-radius: 1.25rem;
+            padding: 2.25rem 1.75rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px -10px rgba(62, 180, 137, 0.15);
+            border-color: rgba(62, 180, 137, 0.4);
+        }
+
+        .pillar-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 1rem;
+            background: rgba(62, 180, 137, 0.12);
+            color: var(--brand-mint);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem auto;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .pillar-card:hover .pillar-icon {
+            background: var(--brand-mint);
+            color: white;
+            transform: scale(1.08);
+        }
+
+        /* InMobi Interactive Creative Simulator */
+        .ad-canvas-simulator {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 3rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* InMobi Form Funnel */
+        .inmobi-funnel-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 3.5rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 45px -10px rgba(73, 89, 129, 0.1);
+        }
+
+        .funnel-tab {
+            padding: 0.75rem 1.75rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+            background: #f8fafc;
+            color: var(--brand-slate);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .funnel-tab.active {
+            background: var(--gradient-performedges);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 14px rgba(62, 180, 137, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- VERSION 2 TOP IDENTIFICATION BANNER -->
+    <div style="background: #0f172a; color: white; padding: 0.65rem 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; border-bottom: 2px solid #3EB489; z-index: 60; position: relative;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="background: #3EB489; color: white; padding: 0.2rem 0.65rem; border-radius: 2rem; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.05em;">BUILD VERSION 2 (V2)</span>
+            <span style="color: #cbd5e1;">InMobi Architecture & Layout · Same Performedges Content & Context</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <a href="/compare" style="color: #93c5fd; text-decoration: underline; font-weight: 600;">View V1 vs V2 Comparison Matrix</a>
+            <a href="/v1" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.25); padding: 0.35rem 0.85rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; transition: all 0.2s;">← Switch to V1 (Original)</a>
+        </div>
+    </div>
+
+    <!-- InMobi-Style Header Navigation -->
+    <header style="background: rgba(255,255,255,0.96); backdrop-filter: blur(14px); border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 50;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            
+            <!-- Brand Logo -->
+            <a href="/v2" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                <div style="width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; background: var(--gradient-performedges); display: flex; align-items: center; justify-content: center; color: white;">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                    </svg>
+                </div>
+                <div>
+                    <span style="font-size: 1.4rem; font-weight: 800; color: var(--brand-slate); letter-spacing: -0.02em;">Perform<span style="color: var(--brand-mint);">edges</span></span>
+                    <span style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-muted); font-weight: 700; display: block;">Performance Mobile Advertising</span>
+                </div>
+            </a>
+
+            <!-- InMobi-Structured Navigation Menu -->
+            <nav style="display: flex; align-items: center; gap: 1rem;">
+                <a href="#home" class="nav-link">Home</a>
+                
+                <!-- For Advertisers Mega Menu -->
+                <div class="dropdown-container">
+                    <button type="button" class="nav-link" onclick="toggleDropdown(event)">
+                        <span>For Advertisers</span>
+                        <svg class="dropdown-arrow" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="dropdown-menu" style="min-width: 17rem;">
+                        <a href="#advertiser-section" class="dropdown-item">
+                            <div>
+                                <strong style="color: var(--brand-slate); display: block;">Boost Your ROI</strong>
+                                <span style="font-size: 0.78rem; color: var(--brand-muted);">CPI, CPS, CPL, CPM, CPO & PPC</span>
+                            </div>
+                        </a>
+                        <a href="#advertiser-section" class="dropdown-item">
+                            <div>
+                                <strong style="color: var(--brand-slate); display: block;">Global Reach, Real Results</strong>
+                                <span style="font-size: 0.78rem; color: var(--brand-muted);">Connect with target demographics worldwide</span>
+                            </div>
+                        </a>
+                        <a href="#ad-formats" class="dropdown-item">
+                            <div>
+                                <strong style="color: var(--brand-slate); display: block;">Strategic Media Buying</strong>
+                                <span style="font-size: 0.78rem; color: var(--brand-muted);">In-house media buying team management</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- For Publishers Mega Menu -->
+                <div class="dropdown-container">
+                    <button type="button" class="nav-link" onclick="toggleDropdown(event)">
+                        <span>For Publishers</span>
+                        <svg class="dropdown-arrow" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="dropdown-menu" style="min-width: 17rem;">
+                        <a href="#publisher-section" class="dropdown-item">
+                            <div>
+                                <strong style="color: var(--brand-slate); display: block;">Profitable Growth</strong>
+                                <span style="font-size: 0.78rem; color: var(--brand-muted);">High-converting campaigns & exclusive offers</span>
+                            </div>
+                        </a>
+                        <a href="#publisher-section" class="dropdown-item">
+                            <div>
+                                <strong style="color: var(--brand-slate); display: block;">Publisher Monetization</strong>
+                                <span style="font-size: 0.78rem; color: var(--brand-muted);">Real-time analytics & on-time payments</span>
+                            </div>
+                        </a>
+                        <a href="/terms#fraud-prevention" class="dropdown-item">
+                            <div>
+                                <strong style="color: var(--brand-slate); display: block;">Quality & Verification</strong>
+                                <span style="font-size: 0.78rem; color: var(--brand-muted);">100% transparent supply & demand</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#ad-formats" class="nav-link">Ad Formats</a>
+                <a href="#pillars" class="nav-link">Why Performedges</a>
+                <a href="/about" class="nav-link">About Us</a>
+            </nav>
+
+            <!-- Dual CTA Action Header (InMobi Style) -->
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <button type="button" class="btn btn-secondary" onclick="openModal('publisherModal')" style="padding: 0.55rem 1.15rem; font-size: 0.85rem; border: 1px solid var(--border-color); color: var(--brand-slate);">
+                    Publisher Form
+                </button>
+                <button type="button" class="btn btn-primary" onclick="openModal('advertiserModal')" style="padding: 0.55rem 1.25rem; font-size: 0.85rem;">
+                    Advertiser Form
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- InMobi-Structured Hero with Persona Switcher (Exact Performedges Content) -->
+    <section id="home" class="gradient-bg" style="color: white; padding: 5.5rem 0 6.5rem 0; position: relative; overflow: hidden;">
+        <div class="container" style="position: relative; z-index: 10;">
+            <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items: center;">
+                
+                <!-- Hero Left: Dynamic Persona Switcher -->
+                <div>
+                    <!-- InMobi-Style Persona Toggle Pill -->
+                    <div class="persona-toggle-container">
+                        <button type="button" id="tab-advertisers" class="persona-btn active" onclick="setHeroPersona('advertisers')">
+                            <span>🚀</span> For Advertisers
+                        </button>
+                        <button type="button" id="tab-publishers" class="persona-btn" onclick="setHeroPersona('publishers')">
+                            <span>💰</span> For Publishers
+                        </button>
+                    </div>
+
+                    <!-- Persona 1 Content: Advertisers (Exact Performedges Copy) -->
+                    <div id="persona-advertisers-view">
+                        <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem;">
+                            Redefining Mobile Advertising
+                        </h1>
+                        <p style="font-size: 1.25rem; line-height: 1.6; color: rgba(255, 255, 255, 0.95); margin-bottom: 2.25rem; max-width: 580px;">
+                            We aim to change the way mobile advertising works. Our focus is on performance — making sure every ad brings real value to businesses. We help you get more conversions and track results you can measure.
+                        </p>
+                        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                            <button type="button" class="btn btn-secondary" onclick="openModal('advertiserModal')">
+                                Launch Advertiser Campaign
+                            </button>
+                            <a href="#advertiser-section" class="btn btn-outline-white">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Persona 2 Content: Publishers (Exact Performedges Copy) -->
+                    <div id="persona-publishers-view" style="display: none;">
+                        <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem;">
+                            Empowering Publishers for Profitable Growth
+                        </h1>
+                        <p style="font-size: 1.25rem; line-height: 1.6; color: rgba(255, 255, 255, 0.95); margin-bottom: 2.25rem; max-width: 580px;">
+                            Publishers play a vital role in the performance marketing ecosystem—and at Performedges, we’re here to help you thrive. With a diverse range of performance-based models and global reach, we offer high-converting campaigns, exclusive offers, and reliable rewards.
+                        </p>
+                        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                            <button type="button" class="btn btn-secondary" onclick="openModal('publisherModal')">
+                                Join as Publisher Partner
+                            </button>
+                            <a href="#publisher-section" class="btn btn-outline-white">
+                                Explore Publisher Benefits
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Values Row -->
+                    <div style="margin-top: 2.25rem; display: flex; gap: 1.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.85); border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem;">
+                        <span>✓ Dedicated Account Manager</span>
+                        <span>✓ Daily Net-PBO Payouts</span>
+                        <span>✓ 100% Transparent Supply & Demand</span>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Moving Ad & Device Components -->
+                <div style="position: relative; height: 420px;">
+                    <!-- Rocket Animation -->
+                    <div class="rocket-animation" style="position: absolute; top: 12%; left: 45%;">
+                        <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                            <svg width="60" height="60" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Banner Ad Component -->
+                    <div class="ad-float" style="position: absolute; top: 8%; left: 6%;">
+                        <div style="background: white; border-radius: 1rem; padding: 1rem 1.25rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15); color: var(--brand-slate); width: 175px;">
+                            <div style="font-size: 0.75rem; font-weight: 800; color: var(--brand-mint);">🎯 BANNER AD</div>
+                            <div style="font-size: 1.1rem; font-weight: 800; margin-top: 0.25rem;">Click Rate +45%</div>
+                            <div style="width: 100%; height: 4px; background: var(--brand-mint); border-radius: 2px; margin-top: 0.5rem;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Video Ad Component -->
+                    <div class="ad-float" style="position: absolute; bottom: 18%; right: 6%; animation-delay: 1.5s;">
+                        <div style="background: white; border-radius: 1rem; padding: 1rem 1.25rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15); color: var(--brand-slate); width: 180px;">
+                            <div style="font-size: 0.75rem; font-weight: 800; color: #ef4444;">▶ VIDEO AD</div>
+                            <div style="font-size: 1.1rem; font-weight: 800; margin-top: 0.25rem;">+127% ROI Boost</div>
+                            <div style="font-size: 0.7rem; color: var(--brand-muted); margin-top: 0.25rem;">User-friendly click-to-play</div>
+                        </div>
+                    </div>
+
+                    <!-- Performance Chart Component -->
+                    <div style="position: absolute; bottom: 8%; left: 12%; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); padding: 1rem 1.5rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.25); display: flex; align-items: flex-end; gap: 0.5rem;">
+                        <div class="chart-animation" style="width: 10px; height: 35px; background: white; border-radius: 3px;"></div>
+                        <div class="chart-animation" style="width: 10px; height: 55px; background: rgba(255,255,255,0.85); border-radius: 3px; animation-delay: 0.2s;"></div>
+                        <div class="chart-animation" style="width: 10px; height: 75px; background: rgba(255,255,255,0.95); border-radius: 3px; animation-delay: 0.4s;"></div>
+                        <div class="chart-animation" style="width: 10px; height: 95px; background: var(--brand-mint); border-radius: 3px; animation-delay: 0.6s;"></div>
+                        <span style="font-size: 0.75rem; font-weight: 700; margin-left: 0.5rem; color: white;">PERFORMANCE</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- InMobi-Style Partner Trust Strip -->
+    <section class="partners-bar">
+        <div class="container text-center">
+            <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; letter-spacing: 0.1em; color: var(--brand-muted); margin-bottom: 1.25rem;">
+                Certified Attribution Integration with Top Industry Measurement Partners
+            </div>
+            <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem;">
+                <div class="partner-logo">AppsFlyer</div>
+                <div class="partner-logo">adjust</div>
+                <div class="partner-logo">SINGULAR</div>
+                <div class="partner-logo">KOCHAVA</div>
+                <div class="partner-logo">branch</div>
+                <div class="partner-logo">Google Tag Manager</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- InMobi-Arranged Stats Section (Exact Performedges Content) -->
+    <section style="padding: 5rem 0; background: white;">
+        <div class="container text-center">
+            <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--brand-text); margin-bottom: 1rem;">
+                Boost Your Revenue with Smarter Ads
+            </h2>
+            <p style="font-size: 1.15rem; color: var(--brand-muted); max-width: 760px; margin: 0 auto 3.5rem auto; line-height: 1.6;">
+                We help you get more sales by using smart technology and detailed analytics. Our system targets the right audience, improves conversions, and delivers results you can track anytime.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="gradient-border">
+                    <div class="gradient-border-inner" style="padding: 2.5rem 1.5rem;">
+                        <div class="counter gradient-text" data-target="95" data-suffix="%" style="font-size: 3.5rem; font-weight: 800; line-height: 1;">0%</div>
+                        <div style="font-size: 1.15rem; font-weight: 700; color: var(--brand-slate); margin-top: 0.75rem;">Higher Conversion Rates</div>
+                        <div style="font-size: 0.85rem; color: var(--brand-muted); margin-top: 0.25rem;">Outcome-driven campaign targeting</div>
+                    </div>
+                </div>
+
+                <div class="gradient-border">
+                    <div class="gradient-border-inner" style="padding: 2.5rem 1.5rem;">
+                        <div class="counter gradient-text" data-target="300" data-suffix="%" style="font-size: 3.5rem; font-weight: 800; line-height: 1;">0%</div>
+                        <div style="font-size: 1.15rem; font-weight: 700; color: var(--brand-slate); margin-top: 0.75rem;">Revenue Growth Potential</div>
+                        <div style="font-size: 0.85rem; color: var(--brand-muted); margin-top: 0.25rem;">Accelerated user acquisition & monetization</div>
+                    </div>
+                </div>
+
+                <div class="gradient-border">
+                    <div class="gradient-border-inner" style="padding: 2.5rem 1.5rem;">
+                        <div class="counter gradient-text" data-target="24" data-suffix="/7" style="font-size: 3.5rem; font-weight: 800; line-height: 1;">0/7</div>
+                        <div style="font-size: 1.15rem; font-weight: 700; color: var(--brand-slate); margin-top: 0.75rem;">Real-Time Analytics</div>
+                        <div style="font-size: 0.85rem; color: var(--brand-muted); margin-top: 0.25rem;">Continuous postback transparency</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- InMobi Dual-Engine Architecture (Advertiser vs Publisher Deep Dive) -->
+    <section style="padding: 6rem 0; background: var(--brand-bg-light); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem auto;">
+                <span style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--brand-mint); letter-spacing: 0.08em;">Our Core Solutions</span>
+                <h2 style="font-size: 2.75rem; font-weight: 800; color: var(--brand-text); margin-top: 0.5rem;">
+                    Dedicated Platforms for Advertisers & Publishers
+                </h2>
+                <p style="color: var(--brand-muted); font-size: 1.1rem; margin-top: 0.75rem;">
+                    Whether scaling campaigns or monetizing app inventory, Performedges provides the specialized framework you need.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+                
+                <!-- Engine 1: Advertisers (Exact Performedges Content) -->
+                <div id="advertiser-section" class="inmobi-engine-card">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <span style="background: rgba(62, 180, 137, 0.12); color: var(--brand-mint); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 1rem;">For Advertisers</span>
+                            <span style="font-size: 1.75rem;">🎯</span>
+                        </div>
+                        <h3 style="font-size: 2rem; font-weight: 800; color: var(--brand-slate); margin-bottom: 1rem;">
+                            Boost Your ROI with Performedges
+                        </h3>
+                        <p style="color: var(--brand-text); font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            At <strong>Performedges</strong>, we specialize in <strong>CPI, CPS, CPL, CPM, CPO, PPC</strong>, and strategic media buying—delivering expert solutions across digital, performance, and affiliate marketing.
+                        </p>
+                        
+                        <div style="background: var(--brand-bg-light); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                            <h4 style="font-weight: 700; color: var(--brand-slate); margin-bottom: 0.5rem;">Why Performance Marketing?</h4>
+                            <p style="font-size: 0.95rem; color: var(--brand-muted); line-height: 1.5;">
+                                Performance marketing helps you build impactful campaigns focused on brand awareness, traffic generation, and visitor conversion. Partnering with Performedges means turning casual site visitors into loyal, high-value customers.
+                            </p>
+                        </div>
+
+                        <div style="background: var(--brand-bg-light); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 2rem;">
+                            <h4 style="font-weight: 700; color: var(--brand-slate); margin-bottom: 0.5rem;">Global Reach, Real Results</h4>
+                            <p style="font-size: 0.95rem; color: var(--brand-muted); line-height: 1.5;">
+                                With an extensive international presence, Performedges connects advertisers with the right audiences—wherever they are. Our broad network and global expertise ensure your campaigns reach the ideal demographics, no matter the region.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="openModal('advertiserModal')" style="width: 100%;">
+                        Start Advertiser Campaign →
+                    </button>
+                </div>
+
+                <!-- Engine 2: Publishers (Exact Performedges Content) -->
+                <div id="publisher-section" class="inmobi-engine-card">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <span style="background: rgba(73, 89, 129, 0.12); color: var(--brand-slate); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 1rem;">For Publishers</span>
+                            <span style="font-size: 1.75rem;">🌐</span>
+                        </div>
+                        <h3 style="font-size: 2rem; font-weight: 800; color: var(--brand-slate); margin-bottom: 1rem;">
+                            Empowering Publishers for Profitable Growth
+                        </h3>
+                        <p style="color: var(--brand-text); font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Publishers play a vital role in the performance marketing ecosystem—and at <strong>Performedges</strong>, we’re here to help you thrive with high-converting campaigns and reliable rewards.
+                        </p>
+                        
+                        <div style="background: var(--brand-bg-light); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                            <h4 style="font-weight: 700; color: var(--brand-slate); margin-bottom: 0.5rem;">Premium Advertisers & Exclusive Deals</h4>
+                            <p style="font-size: 0.95rem; color: var(--brand-muted); line-height: 1.5;">
+                                Our platform gives you access to premium advertisers, exclusive deals, and top-performing campaigns—all designed to boost your commissions across worldwide audiences.
+                            </p>
+                        </div>
+
+                        <div style="background: var(--brand-bg-light); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 2rem;">
+                            <h4 style="font-weight: 700; color: var(--brand-slate); margin-bottom: 0.5rem;">Real-Time Analytics & On-Time Payments</h4>
+                            <p style="font-size: 0.95rem; color: var(--brand-muted); line-height: 1.5;">
+                                Enjoy personalized support, real-time analytics, and on-time payments with full transparency. Focus on growing your content while we take care of your revenue stream.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-secondary" onclick="openModal('publisherModal')" style="width: 100%; border: 2px solid var(--border-color); color: var(--brand-slate);">
+                        Join Performedges Publisher Network →
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- InMobi-Structured 4 Pillars Grid (Exact Performedges Content) -->
+    <section id="pillars" style="padding: 6rem 0; background: white;">
+        <div class="container">
+            <div style="text-align: center; max-width: 650px; margin: 0 auto 4rem auto;">
+                <span style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--brand-mint); letter-spacing: 0.08em;">The Performedges Difference</span>
+                <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--brand-text); margin-top: 0.5rem;">
+                    Proven Strengths Delivering Campaign Success
+                </h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem;">
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌍</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--brand-slate); margin-bottom: 0.5rem;">Global Expertise</h3>
+                    <p style="font-size: 0.92rem; color: var(--brand-muted); line-height: 1.6;">
+                        We use worldwide knowledge and proven methods to create winning strategies.
+                    </p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">⚙️</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--brand-slate); margin-bottom: 0.5rem;">Personalized Optimization</h3>
+                    <p style="font-size: 0.92rem; color: var(--brand-muted); line-height: 1.6;">
+                        We design custom, data-driven campaigns for maximum ROI and steady growth.
+                    </p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">👥</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--brand-slate); margin-bottom: 0.5rem;">In-House Media Buying Team</h3>
+                    <p style="font-size: 0.92rem; color: var(--brand-muted); line-height: 1.6;">
+                        Our skilled team manages your ad spend for the best returns and conversions.
+                    </p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">📊</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--brand-slate); margin-bottom: 0.5rem;">Dedicated & Results-Oriented</h3>
+                    <p style="font-size: 0.92rem; color: var(--brand-muted); line-height: 1.6;">
+                        We go the extra mile to boost your campaign’s success with measurable outcomes.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- InMobi Interactive Creative Canvas (Exact Performedges 5 Formats) -->
+    <section id="ad-formats" style="padding: 6rem 0; background: var(--brand-bg-light); border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div style="text-align: center; max-width: 680px; margin: 0 auto 3rem auto;">
+                <span style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--brand-mint);">Digital Advertising Formats</span>
+                <h2 style="font-size: 2.75rem; font-weight: 800; color: var(--brand-text); margin-top: 0.5rem;">
+                    Engaging Formats Built for Real Conversion
+                </h2>
+                <p style="color: var(--brand-muted); font-size: 1.15rem; margin-top: 0.75rem;">
+                    Leverage Performedges unique digital advertising display and mobile formats to engage your audience and reach your campaign goals.
+                </p>
+            </div>
+
+            <!-- InMobi-Style Tab Buttons -->
+            <div style="display: flex; justify-content: center; gap: 0.75rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                <button type="button" class="tab-button active" onclick="showTab('format-banner', event)">Banner</button>
+                <button type="button" class="tab-button" onclick="showTab('format-native', event)">Native</button>
+                <button type="button" class="tab-button" onclick="showTab('format-video', event)">Video</button>
+                <button type="button" class="tab-button" onclick="showTab('format-interstitials', event)">Interstitials</button>
+                <button type="button" class="tab-button" onclick="showTab('format-push', event)">Push Notifications</button>
+            </div>
+
+            <!-- InMobi-Style Interactive Simulator Canvas -->
+            <div style="max-width: 860px; margin: 0 auto;">
+                
+                <!-- Banner Tab -->
+                <div id="format-banner-content" class="tab-content active ad-canvas-simulator">
+                    <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center;">
+                        <div>
+                            <div style="font-size: 0.8rem; font-weight: 800; color: var(--brand-mint); text-transform: uppercase;">Standard & Rich Display</div>
+                            <h3 style="font-size: 2rem; font-weight: 800; color: var(--brand-slate); margin: 0.5rem 0 1rem 0;">Banner Ads</h3>
+                            <p style="color: var(--brand-text); font-size: 1.05rem; line-height: 1.6;">
+                                Catch attention with fresh, creative designs. Make your ads stand out by adding depth and movement that keep viewers engaged.
+                            </p>
+                            <div style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--brand-muted);">
+                                <span>✓ Standard IAB Compliance (300x250, 320x50)</span><br>
+                                <span>✓ High Viewability & Interaction Metrics</span>
+                            </div>
+                        </div>
+                        <div style="background: var(--brand-bg-light); border-radius: 1rem; padding: 1.75rem; text-align: center; border: 2px dashed #cbd5e1;">
+                            <div style="font-size: 0.75rem; font-weight: 800; color: var(--brand-muted); text-transform: uppercase; margin-bottom: 0.5rem;">INTERACTIVE MOCKUP</div>
+                            <div style="background: var(--gradient-performedges); border-radius: 0.75rem; padding: 1.25rem; color: white;">
+                                <div style="font-weight: 800; font-size: 1.1rem;">🎯 Target Banner Unit</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9; margin: 0.25rem 0 0.75rem 0;">Click Rate +45% Improvement</div>
+                                <button style="background: white; color: var(--brand-slate); border: none; padding: 0.4rem 1rem; border-radius: 0.5rem; font-weight: 700; font-size: 0.8rem;">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Native Tab -->
+                <div id="format-native-content" class="tab-content ad-canvas-simulator">
+                    <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center;">
+                        <div>
+                            <div style="font-size: 0.8rem; font-weight: 800; color: var(--brand-mint); text-transform: uppercase;">In-Feed Discovery</div>
+                            <h3 style="font-size: 2rem; font-weight: 800; color: var(--brand-slate); margin: 0.5rem 0 1rem 0;">Native Ads</h3>
+                            <p style="color: var(--brand-text); font-size: 1.05rem; line-height: 1.6;">
+                                Promote your brand with smart, high-quality ads that blend naturally into the content. Reach your audience while they’re reading, without interrupting their experience.
+                            </p>
+                        </div>
+                        <div style="background: white; border-radius: 1rem; padding: 1.5rem; border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                            <div style="font-size: 0.7rem; font-weight: 800; color: #f59e0b;">SPONSORED FEED</div>
+                            <div style="font-weight: 700; font-size: 0.95rem; margin-top: 0.25rem;">Blending naturally into editorial content without interruption.</div>
+                            <div style="font-size: 0.75rem; color: var(--brand-muted); margin-top: 0.25rem;">Performedges Native Exchange</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Tab -->
+                <div id="format-video-content" class="tab-content ad-canvas-simulator">
+                    <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center;">
+                        <div>
+                            <div style="font-size: 0.8rem; font-weight: 800; color: var(--brand-mint); text-transform: uppercase;">User-Friendly Experience</div>
+                            <h3 style="font-size: 2rem; font-weight: 800; color: var(--brand-slate); margin: 0.5rem 0 1rem 0;">Video Ads</h3>
+                            <p style="color: var(--brand-text); font-size: 1.05rem; line-height: 1.6;">
+                                Video banners are a powerful way to connect with potential customers. Unlike auto-play videos, these ads play only when viewers click the play button, keeping the experience user-friendly.
+                            </p>
+                        </div>
+                        <div style="background: #0f172a; border-radius: 1rem; height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+                            <div class="pulse-glow" style="width: 50px; height: 50px; border-radius: 50%; background: var(--brand-mint); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; cursor: pointer;">▶</div>
+                            <span style="font-size: 0.8rem; margin-top: 0.75rem; font-weight: 600;">Click-to-Play Video Unit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interstitials Tab -->
+                <div id="format-interstitials-content" class="tab-content ad-canvas-simulator">
+                    <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center;">
+                        <div>
+                            <div style="font-size: 0.8rem; font-weight: 800; color: var(--brand-mint); text-transform: uppercase;">Full Canvas Space</div>
+                            <h3 style="font-size: 2rem; font-weight: 800; color: var(--brand-slate); margin: 0.5rem 0 1rem 0;">Interstitial Ads</h3>
+                            <p style="color: var(--brand-text); font-size: 1.05rem; line-height: 1.6;">
+                                Grab attention instantly with full-screen ads. Use the large creative space to deliver your message and enjoy higher click-through rates.
+                            </p>
+                        </div>
+                        <div style="background: white; border-radius: 1rem; padding: 1.5rem; border: 1px solid var(--border-color); text-align: center;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--brand-mint);">📱 Full Screen Canvas</span>
+                            <div style="font-size: 2rem; font-weight: 800; margin: 0.5rem 0;">Higher CTR</div>
+                            <div style="font-size: 0.85rem; color: var(--brand-muted);">Natural screen transition points</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Push Tab -->
+                <div id="format-push-content" class="tab-content ad-canvas-simulator">
+                    <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center;">
+                        <div>
+                            <div style="font-size: 0.8rem; font-weight: 800; color: var(--brand-mint); text-transform: uppercase;">Direct Engagement</div>
+                            <h3 style="font-size: 2rem; font-weight: 800; color: var(--brand-slate); margin: 0.5rem 0 1rem 0;">Push Notifications</h3>
+                            <p style="color: var(--brand-text); font-size: 1.05rem; line-height: 1.6;">
+                                Send your message or offer straight to a user’s device — even when they’re not online. Great for special promotions and bringing customers back.
+                            </p>
+                        </div>
+                        <div style="background: white; border-radius: 1rem; padding: 1.25rem; border-left: 4px solid var(--brand-mint); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                            <div style="font-size: 0.75rem; color: var(--brand-muted);">🔔 TIME-SENSITIVE OFFER</div>
+                            <div style="font-weight: 700; font-size: 0.95rem; margin-top: 0.25rem;">Exclusive promotional deal delivered straight to device.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- InMobi-Arranged Growth & Track Record Section (Exact Performedges Content) -->
+    <section style="padding: 6rem 0; background: white;">
+        <div class="container text-center">
+            <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--brand-text); margin-bottom: 1rem;">
+                Grow Your Traffic & Attract More Customers
+            </h2>
+            <p style="font-size: 1.15rem; color: var(--brand-muted); max-width: 720px; margin: 0 auto 3.5rem auto; line-height: 1.6;">
+                Performedges helps you reach the right audience with advanced targeting tools. We place engaging ads in top spots, driving quality traffic straight to your business.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 640px; margin: 0 auto;">
+                <div class="gradient-border">
+                    <div class="gradient-border-inner" style="padding: 2.5rem 1.5rem;">
+                        <div class="counter gradient-text" data-target="1200" data-suffix="+" style="font-size: 3.5rem; font-weight: 800; line-height: 1;">0+</div>
+                        <div style="font-size: 1.15rem; font-weight: 700; color: var(--brand-slate); margin-top: 0.75rem;">Happy Clients</div>
+                        <div style="font-size: 0.85rem; color: var(--brand-muted); margin-top: 0.25rem;">Worldwide advertising partnerships</div>
+                    </div>
+                </div>
+
+                <div class="gradient-border">
+                    <div class="gradient-border-inner" style="padding: 2.5rem 1.5rem;">
+                        <div class="counter gradient-text" data-target="4" data-suffix="+ Years" style="font-size: 3.5rem; font-weight: 800; line-height: 1;">0+ Years</div>
+                        <div style="font-size: 1.15rem; font-weight: 700; color: var(--brand-slate); margin-top: 0.75rem;">Years of Experience</div>
+                        <div style="font-size: 0.85rem; color: var(--brand-muted); margin-top: 0.25rem;">Proven mobile marketing performance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- InMobi-Style Conversion Funnel ("Start Growing with Performedges Today") -->
+    <section style="background: var(--brand-bg-light); padding: 6rem 0; border-top: 1px solid var(--border-color);">
+        <div class="container" style="max-width: 820px;">
+            <div style="text-align: center; margin-bottom: 3.5rem;">
+                <h2 style="font-size: 2.75rem; font-weight: 800; color: var(--brand-text); margin-bottom: 1rem;">
+                    Start Growing With Performedges Today
+                </h2>
+                <p style="font-size: 1.2rem; color: var(--brand-muted); line-height: 1.6;">
+                    Discover how to get quality leads using powerful ad formats and complete audience reach.
+                </p>
+            </div>
+
+            <!-- InMobi-Style Embedded Form Funnel -->
+            <div class="inmobi-funnel-card">
+                <!-- Funnel Persona Switcher -->
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2.5rem;">
+                    <button type="button" id="funnel-tab-adv" class="funnel-tab active" onclick="switchFunnel('adv')">
+                        🚀 Advertiser Inquiry
+                    </button>
+                    <button type="button" id="funnel-tab-pub" class="funnel-tab" onclick="switchFunnel('pub')">
+                        💰 Publisher Application
+                    </button>
+                </div>
+
+                <form onsubmit="handleFormSubmit(event, 'Performedges Inquiry')">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--brand-slate);">Full Name *</label>
+                            <input type="text" required placeholder="John Doe" style="width: 100%; padding: 0.85rem; border-radius: 0.6rem; border: 1px solid var(--border-color); font-size: 0.95rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--brand-slate);">Work Email *</label>
+                            <input type="email" required placeholder="john@company.com" style="width: 100%; padding: 0.85rem; border-radius: 0.6rem; border: 1px solid var(--border-color); font-size: 0.95rem;">
+                        </div>
+                    </div>
+
+                    <div id="funnel-dynamic-fields" style="margin-bottom: 1.25rem;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--brand-slate);" id="dynamic-field-label">App or Website URL *</label>
+                        <input type="url" required placeholder="https://example.com" style="width: 100%; padding: 0.85rem; border-radius: 0.6rem; border: 1px solid var(--border-color); font-size: 0.95rem;">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.75rem;">
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--brand-slate);">Primary Model</label>
+                            <select style="width: 100%; padding: 0.85rem; border-radius: 0.6rem; border: 1px solid var(--border-color); font-size: 0.95rem; background: white;">
+                                <option>CPI (Cost Per Install)</option>
+                                <option>CPS (Cost Per Sale)</option>
+                                <option>CPL (Cost Per Lead)</option>
+                                <option>CPM / PPC</option>
+                                <option>Web/App Retargeting</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--brand-slate);">Target Region</label>
+                            <select style="width: 100%; padding: 0.85rem; border-radius: 0.6rem; border: 1px solid var(--border-color); font-size: 0.95rem; background: white;">
+                                <option>Global Reach</option>
+                                <option>North America</option>
+                                <option>Europe</option>
+                                <option>Asia Pacific / SEA</option>
+                                <option>Middle East & Africa</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="font-size: 0.8rem; color: var(--brand-muted); margin-bottom: 1.75rem;">
+                        By submitting, you agree to our <a href="/terms" target="_blank" style="color: var(--brand-mint);">Terms of Service</a> and <a href="/privacy-policy" target="_blank" style="color: var(--brand-mint);">Privacy Policy</a>.
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.05rem;">
+                        Connect with Performedges Team →
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- InMobi-Structured Multi-Column Footer (Exact Performedges Content) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3.5rem;">
+                
+                <!-- Col 1: About -->
+                <div>
+                    <div style="font-size: 1.4rem; font-weight: 800; color: white; margin-bottom: 1rem;">Perform<span style="color: var(--brand-mint);">edges</span></div>
+                    <p style="font-size: 0.92rem; line-height: 1.6; max-width: 300px; margin-bottom: 1.5rem;">
+                        Performance-driven mobile advertising and global media buying network. Connecting advertisers with high-converting audiences worldwide.
+                    </p>
+                    <div style="font-size: 0.85rem;">
+                        <div>📍 Singapore · Dubai · New Delhi</div>
+                        <div style="margin-top: 0.25rem;">✉️ partnerships@performedges.com</div>
+                    </div>
+                </div>
+
+                <!-- Col 2: For Advertisers -->
+                <div>
+                    <h4>For Advertisers</h4>
+                    <a href="#advertiser-section">Boost Your ROI</a>
+                    <a href="#advertiser-section">CPI, CPS, CPL Models</a>
+                    <a href="#advertiser-section">Global Reach</a>
+                    <a href="#ad-formats">Media Buying</a>
+                    <a href="#" onclick="openModal('advertiserModal')">Advertiser Form</a>
+                </div>
+
+                <!-- Col 3: For Publishers -->
+                <div>
+                    <h4>For Publishers</h4>
+                    <a href="#publisher-section">Profitable Growth</a>
+                    <a href="#publisher-section">Exclusive Deals</a>
+                    <a href="#publisher-section">On-Time Payments</a>
+                    <a href="#" onclick="openModal('publisherModal')">Publisher Form</a>
+                    <a href="/terms#fraud-prevention">Quality Standards</a>
+                </div>
+
+                <!-- Col 4: Ad Formats -->
+                <div>
+                    <h4>Ad Formats</h4>
+                    <a href="#ad-formats">Banner Ads</a>
+                    <a href="#ad-formats">Native Ads</a>
+                    <a href="#ad-formats">Video Ads</a>
+                    <a href="#ad-formats">Interstitial Ads</a>
+                    <a href="#ad-formats">Push Notifications</a>
+                </div>
+
+                <!-- Col 5: Compliance -->
+                <div>
+                    <h4>Trust & Legal</h4>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/privacy-policy#gdpr">GDPR / CCPA Rights</a>
+                    <a href="/terms#fraud-prevention">Anti-Fraud Policy</a>
+                    <a href="#" onclick="document.getElementById('cookieBanner').style.display='block'">Cookie Preferences</a>
+                </div>
+
+            </div>
+
+            <!-- Copyright Row -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem;">
+                <div>
+                    © 2026 <strong>Performedges</strong>. All Rights Reserved. Outcome-based mobile advertising.
+                </div>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="/privacy-policy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/compare" style="color: var(--brand-mint); font-weight: 700;">Compare V1 vs V2</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING VERSION SWITCHER PILL -->
+    <div style="position: fixed; bottom: 1.5rem; left: 1.5rem; z-index: 99; background: #0f172a; color: white; border-radius: 2rem; padding: 0.45rem 0.5rem 0.45rem 1rem; display: flex; align-items: center; gap: 0.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); font-size: 0.85rem;">
+        <span style="display: flex; align-items: center; gap: 0.4rem; font-weight: 700; color: #3EB489;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #3EB489; display: inline-block;"></span> Active: V2 (InMobi Structure)
+        </span>
+        <a href="/v1" style="background: rgba(255,255,255,0.12); color: white; padding: 0.4rem 0.9rem; border-radius: 1.5rem; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 0.25rem;">
+            ← Switch to V1
+        </a>
+    </div>
+
+    <!-- Modals for Advertiser & Publisher Inquiries -->
+    <div id="advertiserModal" class="modal-overlay" onclick="if(event.target === this) closeModal('advertiserModal')">
+        <div class="modal-card">
+            <div style="padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="font-weight: 800; font-size: 1.3rem; color: var(--brand-slate);">Advertiser Application</h3>
+                <button type="button" onclick="closeModal('advertiserModal')" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+            </div>
+            <form style="padding: 2rem;" onsubmit="handleFormSubmit(event, 'Advertiser')">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem;">Full Name *</label>
+                    <input type="text" required placeholder="Alex Mercer" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem;">Work Email *</label>
+                    <input type="email" required placeholder="alex@company.com" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem;">Company / App Name *</label>
+                    <input type="text" required placeholder="Acme Apps Ltd." style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem;">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Submit Advertiser Application</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="publisherModal" class="modal-overlay" onclick="if(event.target === this) closeModal('publisherModal')">
+        <div class="modal-card">
+            <div style="padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="font-weight: 800; font-size: 1.3rem; color: var(--brand-slate);">Publisher Application</h3>
+                <button type="button" onclick="closeModal('publisherModal')" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+            </div>
+            <form style="padding: 2rem;" onsubmit="handleFormSubmit(event, 'Publisher')">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem;">Publisher / Company Name *</label>
+                    <input type="text" required placeholder="Apex Mobile Studio" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem;">Contact Email *</label>
+                    <input type="email" required placeholder="partnerships@apex.com" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem;">Traffic Source / Website URL *</label>
+                    <input type="url" required placeholder="https://example.com" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem;">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Submit Publisher Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- GDPR Cookie Consent -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div style="font-weight: 700; margin-bottom: 0.25rem;">🍪 Cookie & Privacy Preferences</div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            We use essential cookies to maintain attribution accuracy and telemetry. Accept to continue.
+        </p>
+        <div style="display: flex; gap: 0.5rem;">
+            <button type="button" class="btn btn-primary" onclick="acceptCookies()" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Accept All</button>
+            <button type="button" class="btn btn-outline-dark" onclick="declineCookies()" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Essential Only</button>
+        </div>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="/js/main.js"></script>
+    <script>
+        // Hero Persona Toggle Logic (InMobi Style)
+        function setHeroPersona(persona) {
+            const advTab = document.getElementById('tab-advertisers');
+            const pubTab = document.getElementById('tab-publishers');
+            const advView = document.getElementById('persona-advertisers-view');
+            const pubView = document.getElementById('persona-publishers-view');
+
+            if (persona === 'advertisers') {
+                advTab.classList.add('active');
+                pubTab.classList.remove('active');
+                advView.style.display = 'block';
+                pubView.style.display = 'none';
+            } else {
+                pubTab.classList.add('active');
+                advTab.classList.remove('active');
+                pubView.style.display = 'block';
+                advView.style.display = 'none';
+            }
+        }
+
+        // Funnel Switcher Logic (InMobi Style)
+        function switchFunnel(type) {
+            const advBtn = document.getElementById('funnel-tab-adv');
+            const pubBtn = document.getElementById('funnel-tab-pub');
+            const dynamicLabel = document.getElementById('dynamic-field-label');
+
+            if (type === 'adv') {
+                advBtn.classList.add('active');
+                pubBtn.classList.remove('active');
+                if (dynamicLabel) dynamicLabel.textContent = 'App or Target Product URL *';
+            } else {
+                pubBtn.classList.add('active');
+                advBtn.classList.remove('active');
+                if (dynamicLabel) dynamicLabel.textContent = 'Publisher Website or App Store URL *';
+            }
+        }
+    </script>
+</body>
+</html>

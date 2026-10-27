@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performedges | V1 vs V2 Architectural Comparison</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .comparison-hero {
+            background: #070B14;
+            color: white;
+            padding: 4.5rem 0 3.5rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        .compare-table th {
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+        .compare-table td {
+            padding: 1.25rem 1.5rem;
+            border-top: 1px solid var(--border-color);
+            vertical-align: top;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .v1-badge {
+            background: rgba(62, 180, 137, 0.15);
+            color: #2da177;
+            padding: 0.3rem 0.75rem;
+            border-radius: 1rem;
+            font-weight: 800;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+        .v2-badge {
+            background: rgba(59, 130, 246, 0.15);
+            color: #2563eb;
+            padding: 0.3rem 0.75rem;
+            border-radius: 1rem;
+            font-weight: 800;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body style="background: #f8fafc;">
+    <!-- Top Nav -->
+    <header style="background: white; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 50;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            <a href="/" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                <div style="width: 2.5rem; height: 2.5rem; border-radius: 0.5rem; background: var(--gradient-brand); display: flex; align-items: center; justify-content: center; color: white;">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                    </svg>
+                </div>
+                <span style="font-size: 1.3rem; font-weight: 800; color: var(--text-primary);">Perform<span style="color: var(--primary);">edges</span> <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">/ Version Comparison</span></span>
+            </a>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="/v1" class="btn btn-outline-dark" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Open V1 Prototype</a>
+                <a href="/v2" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Open V2 Prototype (InMobi Style)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Comparison Hero -->
+    <section class="comparison-hero">
+        <div class="container" style="max-width: 840px;">
+            <span style="background: rgba(255,255,255,0.1); color: #6ee7b7; padding: 0.35rem 1rem; border-radius: 2rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">ARCHITECTURE BENCHMARK</span>
+            <h1 style="font-size: 3rem; font-weight: 800; margin: 1rem 0 1rem 0; letter-spacing: -0.02em;">Version 1 vs Version 2 Comparison</h1>
+            <p style="font-size: 1.15rem; color: #94a3b8; line-height: 1.6;">
+                Compare the refactored original WordPress theme build (V1) against the InMobi-inspired enterprise AdTech architecture (V2).
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; text-align: left;">
+                <div style="background: #0E1626; border-radius: 1rem; padding: 1.75rem; border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="v1-badge" style="margin-bottom: 0.75rem;">VERSION 1</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: white;">Original Refactored Theme</h3>
+                    <p style="color: #cbd5e1; font-size: 0.9rem; margin: 0.5rem 0 1.25rem 0;">Preserves original visual branding, fixes all syntax bugs, unclosed tags, and adds required legal compliance.</p>
+                    <a href="/v1" class="btn btn-outline-white" style="width: 100%; text-align: center; font-size: 0.85rem; padding: 0.6rem;">Launch V1 Site →</a>
+                </div>
+
+                <div style="background: #0E1626; border-radius: 1rem; padding: 1.75rem; border: 1px solid rgba(59,130,246,0.4);">
+                    <div class="v2-badge" style="margin-bottom: 0.75rem;">VERSION 2 (RECOMMENDED)</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: white;">InMobi Enterprise AdTech</h3>
+                    <p style="color: #cbd5e1; font-size: 0.9rem; margin: 0.5rem 0 1.25rem 0;">Re-structured around InMobi's persona-led model (Media Buyers vs Media Owners), verified case studies, and interactive canvases.</p>
+                    <a href="/v2" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.85rem; padding: 0.6rem;">Launch V2 Site (InMobi Style) →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Side-by-Side Dimension Matrix -->
+    <main class="container" style="max-width: 1100px; padding: 4.5rem 1.5rem;">
+        <h2 style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.5rem; text-align: center;">
+            Detailed Architectural Breakdown
+        </h2>
+
+        <table class="compare-table">
+            <thead>
+                <tr style="background: #f1f5f9; color: #334155;">
+                    <th style="width: 22%;">Feature Dimension</th>
+                    <th style="width: 39%;"><span class="v1-badge">V1: Original Refactor</span></th>
+                    <th style="width: 39%; background: #eff6ff;"><span class="v2-badge">V2: InMobi-Inspired Architecture</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Target Audience Routing</strong></td>
+                    <td>Unified general narrative; visitors browse a single scroll flow.</td>
+                    <td style="background: #f8fbff;">
+                        <strong style="color: #2563eb;">Bifurcated Persona Model:</strong> Explicit split between <strong>Media Buyers (Advertisers)</strong> and <strong>Media Owners (Publishers)</strong> right in header and hero.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Hero Section</strong></td>
+                    <td>Single static headline with dual CTAs and floating CSS badge icons.</td>
+                    <td style="background: #f8fbff;">
+                        <strong style="color: #2563eb;">Dynamic Interactive Persona Switcher:</strong> Switchable tabs in hero that instantly reconfigure messaging, metrics, and actions for Buyers vs Sellers.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Global Scale & Ecosystem Proof</strong></td>
+                    <td>General stats cards (95% conversion, 1200+ clients, 4+ years).</td>
+                    <td style="background: #f8fbff;">
+                        <strong style="color: #2563eb;">InMobi-Style Scale Bar:</strong> 1.4B+ monthly reach, 150+ countries, 99.6% IVT fraud-free delivery + certified MMP partner marquee.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Product & Solution Architecture</strong></td>
+                    <td>Individual model boxes (CPI, CPA, CPS, Retargeting).</td>
+                    <td style="background: #f8fbff;">
+                        <strong style="color: #2563eb;">Dual Platform Engine:</strong><br>
+                        1. <em>Performedges Growth DSP</em> (Advertisers)<br>
+                        2. <em>Performedges Monetize SSP</em> (Publishers)
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Ad Creative Showcase</strong></td>
+                    <td>Basic tabs displaying text descriptions and small static boxes.</td>
+                    <td style="background: #f8fbff;">
+                        <strong style="color: #2563eb;">InMobi "Deepen Connection" Canvas:</strong> Interactive mobile device mockup displaying live postback stream, playable ads, and rewarded video metrics (94.2% completion).
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Case Studies & Social Proof</strong></td>
+                    <td>No client stories or quantifiable case study testimonials.</td>
+                    <td style="background: #f8fbff;">
+                        <strong style="color: #2563eb;">"Unlock Big Wins" Case Studies:</strong> 3 verified partner stories across FinTech (+48% ROAS), Gaming (4.2M Installs), and Publisher yield (+62% eCPM).
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Contact & Lead Generation</strong></td>
+                    <td>Pop-up modals triggered by buttons.</td>
+                    <td style="background: #f8fbff;">
+                        <strong style="color: #2563eb;">Embedded Dual-Funnel Consultation Engine:</strong> "Let's Build Your Story Together" interactive inquiry module with category filtering.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Footer Architecture</strong></td>
+                    <td>Standard 4-column footer with essential links.</td>
+                    <td style="background: #f8fbff;">
+                        <strong style="color: #2563eb;">Enterprise Mega Footer:</strong> Categorized by Buyers, Publishers, Resources, and Trust Center with global regional offices.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Compliance & Bug Status</strong></td>
+                    <td>All P0-P4 bugs resolved; GDPR privacy and terms live.</td>
+                    <td style="background: #f8fbff;">
+                        All P0-P4 bugs resolved; fully integrated with InMobi design language and GDPR/CCPA standards.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Quick Access Action Bar -->
+        <div style="margin-top: 3.5rem; display: flex; justify-content: center; gap: 1.5rem;">
+            <a href="/v1" class="btn btn-secondary" style="border: 2px solid var(--border-color); padding: 0.9rem 2rem; font-size: 1.05rem;">
+                Browse Version 1 (V1)
+            </a>
+            <a href="/v2" class="btn btn-primary" style="padding: 0.9rem 2rem; font-size: 1.05rem;">
+                Browse Version 2 (V2 - InMobi) →
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container" style="text-align: center; font-size: 0.85rem;">
+            © 2026 Performedges. All Rights Reserved. · <a href="/v1">V1</a> · <a href="/v2">V2</a> · <a href="/compare">Comparison</a>
+        </div>
+    </footer>
+</body>
+</html>
